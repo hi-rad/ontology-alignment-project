@@ -1,7 +1,7 @@
 # Ontology Alignment Project Code
 
 > This repository contains the code for a Graduate Coursework Project (EE8209 - Intelligent Systems) for Winter 2022.
-## 1. Introduction snd Setup
+## 1. Introduction and Setup
 
 
 ## 2. Dataset

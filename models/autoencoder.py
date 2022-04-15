@@ -8,16 +8,13 @@ class BaseGNNAutoEncoder(torch.nn.Module):
         super(BaseGNNAutoEncoder, self).__init__()
         torch.manual_seed(12345)
 
-        self.encoder = Sequential('x, edge_index', [])
-        self.decoder = Sequential('x, edge_index', [])
-
     def forward(self, x, edge_index):
         x = self.encoder(x, edge_index)
         x = self.decoder(x, edge_index)
         return x
 
 
-class DeepGNNAutoEncoder(torch.nn.Module):
+class DeepGNNAutoEncoder(BaseGNNAutoEncoder):
     def __init__(self, in_channels, middle_channels=128, bottleneck_channels=64):
         super(DeepGNNAutoEncoder, self).__init__()
         torch.manual_seed(12345)
@@ -37,7 +34,7 @@ class DeepGNNAutoEncoder(torch.nn.Module):
         return 'DeepGNNAutoEncoder'
 
 
-class ShallowGNNAutoEncoder(torch.nn.Module):
+class ShallowGNNAutoEncoder(BaseGNNAutoEncoder):
     def __init__(self, in_channels, bottleneck_channels=64):
         super(ShallowGNNAutoEncoder, self).__init__()
         torch.manual_seed(12345)

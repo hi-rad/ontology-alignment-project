@@ -1,8 +1,8 @@
-# Ontology Alignment Project Code
+# Ontology Alignment Project
 
 > This repository contains the code for a Graduate Coursework Project (EE8209 - Intelligent Systems) for Winter 2022.
 ## 1. Introduction and Setup
-In this project we used two ontologies (mouse and human anatomy). We first need to preprocess the concept labels to create embeddings for concept labels. For this we used a pretrained model. The model should be downloaded from [http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin](http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin) and placed inside the `data` directory.
+In this project, we used two ontologies (mouse and human anatomy). We first need to preprocess the concept labels to create embeddings for concept labels. Thus, we used a pretrained word2vec model based on Pubmed and PMC vocabularies. The model binary file can be downloaded from [http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin](http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin) and placed inside the `data` directory.
 ### 1.1. Needed Packages
 You should install the following packages using pip (or any other python package manager of your choice)
 - Pandas = 1.2.4
@@ -37,7 +37,7 @@ The files are:
 - `utils\gnn_dataset.py`: The file contains the graph dataset created for each concept using PyTorch Geometric
 
 ## 2. Dataset
-The dataset should be downloaded from [http://oaei.ontologymatching.org/2019/anatomy/anatomy-dataset.zip](http://oaei.ontologymatching.org/2019/anatomy/anatomy-dataset.zip). It contains 3 files. All three files should be put inside a folder named `anatomy` and the `anatomy`directory  should be placed inside the `data` directory.
+The dataset can be downloaded from [http://oaei.ontologymatching.org/2019/anatomy/anatomy-dataset.zip](http://oaei.ontologymatching.org/2019/anatomy/anatomy-dataset.zip). It contains 3 files. All three files should be put inside a folder named `anatomy` and the `anatomy`directory  should be placed inside the `data` directory.
 
 The dataset is the ontologies of mouse and human anatomy. It also contains a reference file indicating the matched pairs of concepts between the two ontologies.
 
@@ -53,7 +53,7 @@ After installing the packages and placing the required files in the `data` direc
 After running the files, all results will be presented and the figures will be generated and put in the `data` directory. The code can use `cuda` or `cpu` depending on the hardware availability.
 
 ## 4. Results
-We first need to create graphs for each concept based on the concepts related to it. Figure 1 shows a sample concept graph with the blue node as the main concept and the blue nodes as the related concepts.
+We first need to create graphs for each concept based on its related concepts. Figure 1 shows a sample concept graph with the blue node as the main concept and the blue nodes as the related concepts.
 
 ![Figure 1. Sample Concept Graph](/data/sample_graph_5088.png)
 

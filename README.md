@@ -3,7 +3,7 @@
 > This repository contains the code for a Graduate Coursework Project (EE8209 - Intelligent Systems) for Winter 2022.
 ## 1. Introduction and Setup
 In this project, we used two ontologies (mouse and human anatomy). We first need to preprocess the concept labels to create embeddings for concept labels. Thus, we used a pretrained word2vec model based on Pubmed and PMC vocabularies. The model binary file can be downloaded from [http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin](http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin) and placed inside the `data` directory.
-### 1.1. Needed Packages
+### 1.1. Required Packages
 You should install the following packages using pip (or any other python package manager of your choice)
 - Pandas = 1.2.4
 - Numpy = 1.19.5
